@@ -1,0 +1,12 @@
+kind: ExternalService
+name: id
+spec:
+  image_pull_policy: Always
+  port: 80
+  domains:
+    - name: id.darinternet.com
+  source:
+    context: .
+    dll_name: DarInternet.Identity.dll
+    dotnet_version: '3.1'
+    project_type: aspnetcore
